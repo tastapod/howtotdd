@@ -1,0 +1,29 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@v2
+      with:
+        submodules: false
+
+    - name: Hugo Deploy GitHub Pages
+      uses: benmatselby/hugo-deploy-gh-pages@v1.13.0
+      env:
+        CNAME: howtotdd.in
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        GO_VERSION: 1.17.6
+        HUGO_EXTENDED: true
+        HUGO_VERSION: 0.92.1
+        TARGET_BRANCH: main
+        TARGET_REPO: tastapod/howtotdd-website
+        TOKEN: ${{secrets.WEBSITE_DEPLOY_TOKEN}}

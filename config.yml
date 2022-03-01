@@ -1,0 +1,24 @@
+title: How to TDD
+theme: github.com/thingsym/hugo-theme-techdoc
+baseURL: https://howtotdd.in/
+languageCode: en-GB
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+menu_exclusion:
+  # path names excluded from documentation menu
+  - posts
+
+params:
+  menu_style: open-menu # | slide-menu | ''
+  custom_font_color: ''
+  custom_background_color: ''

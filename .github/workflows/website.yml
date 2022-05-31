@@ -25,5 +25,5 @@ jobs:
         HUGO_EXTENDED: true
         HUGO_VERSION: 0.92.1
         TARGET_BRANCH: main
-        TARGET_REPO: tastapod/howtotdd-website
+        TARGET_REPO: tastapod/howtotdd-generated
         TOKEN: ${{secrets.WEBSITE_DEPLOY_TOKEN}}
